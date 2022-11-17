@@ -19,7 +19,6 @@ body{
 /* COMMON */
 .container{
     margin: auto;
-    background-color: blueviolet;
     max-width: 1280px;
     height: calc(100% - 50px);
     display: flex;
@@ -139,6 +138,13 @@ img {
 /* CHAT */
 .chat{
     width: calc(1280px - 535px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat i:hover{
+    color: black;
 }
 
 .contact-chat{
@@ -147,6 +153,7 @@ img {
     align-items: center;
     padding: 11px 10px;
     background-color: #eaeaea;
+    cursor: pointer;
 }
 
 .user-chat{
@@ -173,4 +180,68 @@ img {
     scale: 120%;
 }
 
+.content{
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 50px;
+    background-image: url(../img/mine.jpg);
+}
 
+.message-row{
+    display: flex;
+    margin: 20px;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
+.message {
+    display: flex;
+    border-radius: 10px;
+    align-items: flex-end;
+}
+
+.message small{
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.sent{
+    background-color: #d5f9ba;
+}
+
+.recieved{
+    background-color: white;
+}
+
+.message p{
+    padding: 5px 10px;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.new-message{
+    display: flex;
+    height: 50px;
+    background-color: #eaeaea;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-message input{
+    flex-grow: 1;
+    cursor: text;
+    margin: 5px;
+}
+
+.new-message i{
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #6b7376;
+    cursor: pointer;
+}

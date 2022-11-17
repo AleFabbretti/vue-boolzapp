@@ -107,6 +107,35 @@ img {
     cursor: text;
     width: 400px;
 }
+
+.list-contact{
+    background-color: white;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.list-message{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.user .description{
+    margin-left: 5px;
+}
+.info{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.list-contact small{
+    color: #b6c4d4;
+}
+
+.active{
+    background-color: #e9ebeb;
+}
 /* CHAT */
 .chat{
     width: calc(1280px - 535px);

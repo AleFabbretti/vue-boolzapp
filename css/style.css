@@ -141,3 +141,36 @@ img {
     width: calc(1280px - 535px);
 }
 
+.contact-chat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 10px;
+    background-color: #eaeaea;
+}
+
+.user-chat{
+    display: flex;
+    align-items: center;
+}
+
+.user-chat img{
+    width: 40px;
+
+}
+.description-chat{
+    margin-left: 10px;
+}
+
+.description-chat small{
+    font-size: smaller;
+    color: #b1b1b1; 
+}
+
+.user-icon i{
+    margin: 0 10px;
+    color: #b1b1b1;
+    scale: 120%;
+}
+
+

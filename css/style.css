@@ -89,6 +89,24 @@ img {
     color: #b1b1b1;
 }
 
+.search{
+    display: flex;
+    background-color: white;
+    padding: 20px;
+}
+
+.search button, input {
+    font-size: 16px;
+    padding: 6px 13px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.search input {
+    cursor: text;
+    width: 400px;
+}
 /* CHAT */
 .chat{
     width: calc(1280px - 535px);

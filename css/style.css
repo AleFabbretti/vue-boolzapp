@@ -135,6 +135,7 @@ img {
 .active{
     background-color: #e9ebeb;
 }
+
 /* CHAT */
 .chat{
     width: calc(1280px - 535px);

@@ -53,96 +53,12 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </form>
                 <div class="list-contact">
-                    <div class="list-message active">
+                    <div class="list-message" :class="{'active' : index === contactIndex}" v-for="(contact, index) in contacts" @click="openChat(index)">
                         <div class="user">
-                            <img src="img/avatar_1.jpg" alt="avatar_1">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}_avatar_pic`">
                             <div class="description">
-                                <h4>Michele</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_2.jpg" alt="avatar_2">
-                            <div class="description">
-                                <h4>Fabio</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_3.jpg" alt="avatar_3">
-                            <div class="description">
-                                <h4>Samuele</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_4.jpg" alt="avatar_4">
-                            <div class="description">
-                                <h4>Alessandro B.</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_io.jpg" alt="avatar_io">
-                            <div class="description">
-                                <h4>Sofia</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_6.jpg" alt="avatar_6">
-                            <div class="description">
-                                <h4>Claudia</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_7.jpg" alt="avatar_7">
-                            <div class="description">
-                                <h4>Federico</h4>
-                                <small>Ultimo messaggio inviato</small>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="list-message">
-                        <div class="user">
-                            <img src="img/avatar_8.jpg" alt="avatar_8">
-                            <div class="description">
-                                <h4>Davide</h4>
-                                <small>Ultimo messaggio inviato</small>
+                                <h4>{{contact.name}}</h4>
+                                <small>{{ contact.messages[contact.messages.length - 1].message }}</small>
                             </div>
                         </div>
                         <div class="info">

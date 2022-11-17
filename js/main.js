@@ -5,7 +5,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!',
+        contactIndex: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -91,8 +91,8 @@ const { createApp } = Vue
                 ],
             },
             {
-                name: 'Alessandro L.',
-                avatar: '_5',
+                name: 'Sofia',
+                avatar: '_io',
                 visible: true,
                 messages: [
                     {
@@ -171,5 +171,10 @@ const { createApp } = Vue
         ]
         
       }
-    }
+    },
+    methods: {
+        openChat: function(i){
+            this.contactIndex = i;
+        }
+    },
   }).mount('#app')

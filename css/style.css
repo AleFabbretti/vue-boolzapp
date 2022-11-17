@@ -96,12 +96,16 @@ img {
 }
 
 .search button, input {
-    font-size: 16px;
+    font-size: 14px;
     padding: 6px 13px;
     border: none;
     cursor: pointer;
     background-color: white;
 }
+
+.search button{
+    scale: 120%;
+} 
 
 .search input {
     cursor: text;

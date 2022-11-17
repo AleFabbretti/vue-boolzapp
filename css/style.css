@@ -189,7 +189,7 @@ img {
 
 .message-row{
     display: flex;
-    margin: 20px;
+    margin: 15px;
 }
 
 .flex-end{
@@ -220,9 +220,8 @@ img {
 }
 
 .message p{
-    padding: 5px 10px;
+    padding: 8px 10px;
     border-radius: 10px;
-    padding: 15px 20px;
 }
 
 .new-message{

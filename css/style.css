@@ -103,10 +103,6 @@ img {
     background-color: white;
 }
 
-.search button{
-    scale: 120%;
-} 
-
 .search input {
     cursor: text;
     width: 400px;

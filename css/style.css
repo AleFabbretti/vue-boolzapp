@@ -136,7 +136,7 @@ img {
     background-color: #e9ebeb;
 }
 
-/* CHAT */
+/* CHAT COL*/
 .chat{
     width: calc(1280px - 535px);
     display: flex;
@@ -160,6 +160,7 @@ img {
 .user-chat{
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .user-chat img{
@@ -186,6 +187,7 @@ img {
     flex-direction: column;
     padding: 50px;
     background-image: url(../img/mine.jpg);
+    overflow-y: auto;
 }
 
 .message-row{
@@ -203,21 +205,35 @@ img {
 
 .message {
     display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    align-items: flex-end;
+    min-width: 25%;
+    max-width: 45%;
+    margin: 15px;
 }
 
 .message small{
     padding-right: 5px;
     padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .sent{
     background-color: #d5f9ba;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.recieved{
+.received{
     background-color: white;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message-row .received .message {
+    background-color: white;
+    justify-content: flex-start;
 }
 
 .message p{

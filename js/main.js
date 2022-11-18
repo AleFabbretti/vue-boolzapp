@@ -172,6 +172,8 @@ const { createApp } = Vue
         
       }
     },
+
+    //metodo per la modifica di una variabile
     methods: {
         openChat: function(i){
             this.contactIndex = i;

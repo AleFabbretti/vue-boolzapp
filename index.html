@@ -86,25 +86,12 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="message-row flex-end">
-                        <div class="message sent">
-                            <p class="sent">Hai portato a spasso il cane?</p>
-                            <small>12:00</small>
+                    <div class="message-row">
+                        <div class="message" v-for="message in contacts[contactIndex].messages" :class="message.status">
+                            <p>{{message.message}}</p>
+                            <small>{{message.date}}</small>
                         </div>
                     </div>
-                    <div class="message-row flex-end">
-                        <div class="message sent">
-                            <p class="sent">Ricordati di stendere i panni</p>
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="message-row flex-start">
-                        <div class="message recieved">
-                            <p>Tutto fatto!</p>
-                            <small>12:00</small>
-                        </div>
-                    </div>
-
                 </div>
                 <form class="new-message">
                     <i class="fa-regular fa-face-smile"></i>

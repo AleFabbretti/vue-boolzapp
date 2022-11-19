@@ -170,7 +170,7 @@ const { createApp } = Vue
             }
         ],
         newMessage: "",
-        
+        searchText: "",
       }
     },
 
@@ -196,5 +196,10 @@ const { createApp } = Vue
                 });
             },1000)
         },
+        filterContactList: function(contact) {
+                if(contact.name.toLowerCase().startsWith(this.searchText.toLowerCase()) ){
+                    return contact;
+                }
+        }
     },
   }).mount('#app')

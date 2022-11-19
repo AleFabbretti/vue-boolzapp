@@ -92,8 +92,8 @@
                 </div>
                 <div class="content">
                     <div class="message-row">
-                        <div class="message" v-for="message in contacts[contactIndex].messages" :class="message.status">
-                            <p>{{message.message}}</p>
+                        <div class="message" v-for="(message, index) in contacts[contactIndex].messages" :class="message.status">
+                            <p @click="removeMessage(index)">{{message.message}}</p>
                             <small>{{message.date}}</small>
                         </div>
                     </div>

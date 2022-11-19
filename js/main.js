@@ -200,6 +200,9 @@ const { createApp } = Vue
                 if(contact.name.toLowerCase().startsWith(this.searchText.toLowerCase()) ){
                     return contact;
                 }
+        },
+        removeMessage: function(index) {
+            this.contacts[this.contactIndex].messages.splice(index, 1);
         }
     },
   }).mount('#app')

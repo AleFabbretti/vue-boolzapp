@@ -193,14 +193,7 @@ img {
 .message-row{
     display: flex;
     margin: 15px;
-}
-
-.flex-end{
-    justify-content: flex-end;
-}
-
-.flex-start{
-    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .message {
@@ -217,12 +210,12 @@ img {
     padding-bottom: 5px;
     display: flex;
     justify-content: flex-end;
+    font-size: 11px;
 }
 
 .sent{
     background-color: #d5f9ba;
-    display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
 }
 
 .received{
@@ -239,6 +232,7 @@ img {
 .message p{
     padding: 8px 10px;
     border-radius: 10px;
+    font-size: 14px;
 }
 
 .new-message{

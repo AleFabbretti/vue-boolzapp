@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="info">
-                            <small>12:00</small>
+                            <small>{{contact.messages[contact.messages.length - 1].date }}</small>
                         </div>
                     </div>
                 </div>
@@ -78,10 +78,10 @@
             <div class="chat">
                 <div class="contact-chat">
                     <div class="user-chat">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
+                        <img :src="`img/avatar${contacts[contactIndex].avatar}.jpg`" alt="`${contact.name}_avatar_pic`">
                         <div class="description-chat">
-                            <h5>Michele</h5>
-                            <small>Ultimo accesso oggi alle 12:00</small>
+                            <h5>{{contacts[contactIndex].name}}</h5>
+                            <small>{{ contacts[contactIndex].messages[contacts[contactIndex].messages.length - 1].date }}</small>
                         </div>
                     </div>
                     <div class="user-icon">

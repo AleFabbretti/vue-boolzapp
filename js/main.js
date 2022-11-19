@@ -168,7 +168,8 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ]
+        ],
+        newMessage: "",
         
       }
     },
@@ -177,6 +178,23 @@ const { createApp } = Vue
     methods: {
         openChat: function(i){
             this.contactIndex = i;
-        }
+        },
+        createNewMessage: function(){
+            moment.locale("it");
+            const msg = {
+                date: moment(new Date, "DD/MM/YYYY hh:mm:ss").fromNow(),
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.contactIndex].messages.push(msg);
+            this.newMessage = "";
+            setTimeout(() => {
+                this.contacts[this.contactIndex].messages.push({
+                    date: moment(new Date, "DD/MM/YYYY hh:mm:ss").fromNow(),
+                    message: 'ok',
+                    status: 'received'
+                });
+            },1000)
+        },
     },
   }).mount('#app')

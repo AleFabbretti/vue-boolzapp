@@ -22,9 +22,11 @@
     <!-- Axios CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- /Axios CDN -->
-    <!-- luxon CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
-    <!-- /luxon CDN -->
+    <!-- moment CDN -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <!-- /moment CDN -->
+    
 </head>
 <body>
     <div id="app">
@@ -96,9 +98,9 @@
                         </div>
                     </div>
                 </div>
-                <form class="new-message">
+                <form class="new-message" @submit.prevent="createNewMessage">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
                     <i class="fa-solid fa-microphone"></i>
                 </form>
             </div>

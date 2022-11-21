@@ -180,6 +180,8 @@ const { createApp } = Vue
             this.contactIndex = i;
         },
         createNewMessage: function(){
+
+        //metodo per inserire nuovo messaggio e conseguente risposta della cpu
             moment.locale("it");
             const msg = {
                 date: moment(new Date, "DD/MM/YYYY hh:mm:ss").fromNow(),
@@ -196,11 +198,15 @@ const { createApp } = Vue
                 });
             },1000)
         },
+
+        //metodo per filtrare i contatti in lista
         filterContactList: function(contact) {
                 if(contact.name.toLowerCase().startsWith(this.searchText.toLowerCase()) ){
                     return contact;
                 }
         },
+
+        //metodo per rimuovere i messaggi
         removeMessage: function(index) {
             this.contacts[this.contactIndex].messages.splice(index, 1);
         }

@@ -53,10 +53,14 @@
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
                 </div>
+                <!-- SEARCH BAR CONTATTI -->
                 <form class="search" @submit.prevent="">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchText" >
                 </form>
+                <!-- /SEARCH BAR CONTATTI -->
+
+                <!-- SEZIONE CONTATTI -->
                 <div class="list-contact">
                     <div class="list-message" :class="{'active' : index === contactIndex}" v-for="(contact, index) in contacts" @click="openChat(index)" v-show="filterContactList(contact)">
                         <div class="user">
@@ -71,6 +75,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- /SEZIONE CONTATTI -->
+
             </div>
     <!-- /CONTACTS COL -->    
 
@@ -90,6 +96,7 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
+                <!-- MAIN CHAT-CONTENT -->
                 <div class="content">
                     <div class="message-row">
                         <div class="message" v-for="(message, index) in contacts[contactIndex].messages" :class="message.status">
@@ -98,11 +105,16 @@
                         </div>
                     </div>
                 </div>
+                <!-- /MAIN CHAT-CONTENT -->
+
+                <!-- FORM CHAT -->
                 <form class="new-message" @submit.prevent="createNewMessage">
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
                     <i class="fa-solid fa-microphone"></i>
                 </form>
+                <!-- /FORM CHAT -->
+                
             </div>
     <!-- /CHAT COL -->
 
